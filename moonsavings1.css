@@ -1,0 +1,728 @@
+/* overall default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sen';
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* the default color */
+body {
+    background-color: white;
+    color: white;
+    font-family: 'Sen';
+    min-height: 100vh;
+}
+
+/* navbar header design */
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 120px;
+    font-size: 15px;
+    background-color: #9831FF;
+    z-index: 100;
+}
+
+/* logo size */
+.logo {
+    font-size: 30px;
+    margin-left: -50px;
+}
+
+/* styling navbar spacing */
+.navbar {
+    width: 20%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/* navbar underline placement */
+.navbar a {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+/* display an underline under the navbar when hovering */
+.navbar a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: cyan;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+/* width of underline */
+.navbar a:hover::after {
+    width: 100%;
+}
+
+#menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* new section default */
+section {
+    padding-left: 70px;
+}
+
+/* home section default */
+.home {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    align-items: center;
+    background-color: #9831FF;
+}
+
+/* h1 styling */
+.home h1 {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 84px;
+}
+
+/* h3 styling */
+.home h3 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+/* paragraph styling */
+.home p {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* moves to the left 120px */
+.home h1,
+.home h3,
+.home p {
+    margin-left: 120px;
+}
+
+/* spaceship design */
+.spaceship {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    width: 250px;
+    margin-left: 1300px;
+    margin-top: 200px;
+    margin-bottom: 300px;
+    background: #17F0E3;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    z-index: 100;
+}
+
+/* wings shape and color */
+.wing1,
+.wing2 {
+    box-sizing: border-box;
+    background: linear-gradient(217.72deg, #B163FF 12.77%, #17F0E3 84.48%);
+    border-radius: 30%;
+    position: absolute;
+    z-index: -100;
+}
+
+/* placement for wing1 */
+.wing1 {
+    width: 165px;
+    height: 152px;
+    top: 63%;
+    right: -35%;
+    border-top-right-radius: 80%;
+    border-bottom-right-radius: 20%;
+}
+
+/* placement for wing2 */
+.wing2 {
+    width: 165px;
+    height: 152px;
+    top: 0%;
+    left: -155%;
+    border-top-left-radius: 80%;
+    border-bottom-left-radius: 20%;
+}
+
+/* styling the exhaust */
+.exhaust {
+    box-sizing: border-box;
+    background: linear-gradient(217.72deg, #B163FF 12.77%, #17F0E3 84.48%);
+    position: absolute;
+    z-index: -100;
+}
+
+/* exhaust placement */
+.exhaust {
+    width: 120px;
+    height: 25px;
+    top: 102%;
+    right: 90%;
+}
+
+/* can move the windows wherever */
+.window1,
+.window2,
+.window3 {
+    box-sizing: border-box;
+    position: absolute;
+}
+
+/* gray part of window and placement*/
+.window1 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    right: 29%;
+    border-radius: 100%;
+    background-color: #9897a9;
+}
+
+/* glass window and placement*/
+.window2 {
+    width: 80px;
+    height: 80px;
+    top: 22.5%;
+    right: 33%;
+    border-radius: 100%;
+    background-color: #9831FF;
+}
+
+/* window glare and placement*/
+.window3 {
+    width: 30px;
+    height: 30px;
+    top: 25%;
+    right: 48%;
+    border-radius: 100%;
+    background-color: white;
+}
+
+
+
+/* Feature Section*/
+
+/* feature section default */
+.features {
+    min-height: 100vh;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* title styling */
+#featureTitle {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+/* change the font */
+#logoFt {
+    font-size: 35px;
+}
+
+
+.parent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* creates the background glass */
+.box1 {
+    box-sizing: border-box;
+    width: 372px;
+    height: 492px;
+    background: rgba(217, 217, 217, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+
+/* creates the inner box */
+.box2 {
+    box-sizing: border-box;
+    width: 334px;
+    height: 167px;
+    background: linear-gradient(270.01deg, #26FFF2 0.01%, #B658FF 99.99%);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* creates the background glass */
+.box3 {
+    box-sizing: border-box;
+    width: 372px;
+    height: 492px;
+    background: rgba(217, 217, 217, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    margin-bottom: 100px;
+}
+
+/* creates the inner box */
+.box4 {
+    box-sizing: border-box;
+    width: 334px;
+    height: 167px;
+    background: linear-gradient(270.01deg, #26FFF2 0.01%, #B658FF 99.99%);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.box1 h2,
+.box3 h2 {
+    text-align: center;
+}
+
+/* inner box text style */
+.box2 p,
+.box4 p {
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 20px;
+    font-size: 26px;
+    color: white;
+}
+
+/* changes the font size */
+.box2 p strong,
+.box4 p strong {
+    font-size: 36px;
+}
+
+
+/* h2 style */
+.features h2 {
+    color: black;
+    margin-left: 20px;
+    margin-top: 25px;
+    font-size: 36px;
+}
+
+/* h3 styling */
+.features h3 {
+    color: black;
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 26px;
+}
+
+/* information style inside glass box */
+#info1 {
+    color: black;
+    margin-top: 20px;
+    margin-right: 25px;
+    margin-left: 25px;
+    font-size: 20px;
+}
+
+/* About Section */
+.about {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #9831FF;
+}
+
+/* glass like effect card box */
+.aboutCard {
+    box-sizing: border-box;
+    width: 712px;
+    height: 316px;
+
+    background: rgba(217, 217, 217, 0.4);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+    border-radius: 30px;
+    margin: auto;
+    z-index: 2;
+}
+
+/* creating the circle */
+.circle1,
+.circle2 {
+    box-sizing: border-box;
+    background: linear-gradient(217.72deg, #B163FF 12.77%, #17F0E3 84.48%);
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* placement for circle1 */
+.circle1 {
+    width: 298px;
+    height: 284px;
+    top: 205%;
+    right: 42%;
+}
+
+/* placement for circle2 */
+.circle2 {
+    width: 165px;
+    height: 152px;
+    top: 243%;
+    left: 10%;
+}
+
+/* top part of the card box and the style */
+.head {
+    display: flex;
+    margin-top: 20px;
+}
+
+/* placement for the heading*/
+.head h1 {
+    margin-left: 25px;
+}
+
+/* places the button 500px to the left of webpage */
+.head button {
+    margin-left: 500px;
+}
+
+/* text align side by side */
+.saveYear,
+.balance {
+    display: flex;
+}
+
+/* total year savings header placement */
+.saveYear h3 {
+    margin-left: 25px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+/* paragraph placement */
+.saveYear p {
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+/* current balance header placement */
+.balance h3 {
+    margin-left: 25px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+/* balance price placement */
+.balance p {
+    margin-left: 75px;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+/* details why to join placement */
+.joinNow {
+    margin-right: 300px;
+}
+
+/* button styling and placement */
+.button {
+    position: absolute;
+    background-color: #9831FF;
+    border-radius: 2em;
+    border: none;
+    padding: 10px 50px;
+    color: white;
+    margin-top: 20px;
+}
+
+/* about paragraph placement */
+.joinNow p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* about header size */
+.joinNow h1 {
+    font-size: 30px;
+}
+
+/* Footer */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* footer default */
+.footer {
+    padding: 10px 0;
+    background-color: white;
+}
+
+/* column header distance */
+.col {
+    width: 33%;
+}
+
+/* column header placement */
+.col h4 {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 25px;
+    position: relative;
+    text-align: center;
+}
+
+/* a underline design that separates details from the header */
+.col h4::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -8px;
+    background: #9831FF;
+}
+
+/* gives space between the list */
+.col ul li:not(last-child) {
+    margin-bottom: 15px;
+}
+
+/* color, style, and placement of detail texts */
+.col ul li a {
+    color: #9897a9;
+    font-size: 1.1rem;
+    display: block;
+    text-transform: capitalize;
+    transition: .4s;
+    text-align: center;
+}
+
+/* changes color when hovering and effect */
+.col ul li a:hover {
+    color: #7600ec;
+    transform: translate(-10px);
+}
+
+/* placement and style of the social media icons */
+.col .social {
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+/* default color and size of the icons */
+.col .social a {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+/* icon styling and effect when hovering */
+.col .social a:hover {
+    transform: scale(1.2);
+    color: white;
+    background: #9831FF;
+}
+
+@media (max-width: 768px) {
+
+    .wing1,
+    .wing2 {
+        position: absolute;
+        width: 150px;
+        margin-right: 15px;
+    }
+
+    .spaceship {
+        left: -1220px;
+        height: 320px;
+        margin-top: 550px;
+        z-index: 1;
+    }
+
+    body {
+        min-width: 52vh;
+        min-height: 100vh;
+    }
+
+    .home p {
+        margin-bottom: 200px;
+    }
+
+    .home h3,
+    .home p {
+        margin-left: 0;
+        display: flex;
+    }
+
+    .home h1 {
+        margin-left: 100px;
+        font-size: 50px;
+        line-height: normal;
+    }
+
+    .home h3 {
+        margin-left: 50px;
+        font-size: 30px;
+        line-height: normal;
+    }
+
+    header {
+        padding: 10px 50px;
+    }
+
+    .logo {
+        margin-left: -25px;
+    }
+
+    .featureTitle {
+        margin-left: 25px;
+    }
+
+    .box2,
+    .box4,
+    .box2 p,
+    .box4 p {
+        box-sizing: border-box;
+        width: 300px;
+        height: 150px;
+        border-radius: 30px;
+        font-size: 15px;
+    }
+
+    .box1,
+    .box3 {
+        box-sizing: border-box;
+        width: 5px;
+        height: 450px;
+        border-radius: 30px;
+        margin-left: 20px;
+    }
+
+    .joinNow {
+        margin-bottom: 500px;
+    }
+
+    .joinNow h1 {
+        position: absolute;
+        text-align: center;
+        left: 39%;
+    }
+
+    .joinNow p {
+        text-align: center;
+        margin-top: 50px;
+        min-width: 40vh;
+        margin-left: 300px;
+    }
+
+    .joinNow .button {
+        display: inline-block;
+        margin-left: 385px;
+        margin-top: 200px;
+        z-index: 2;
+    }
+
+    .circle1 {
+        height: 80px;
+        width: 80px;
+        margin-right: -100px;
+        margin-top: 395px;
+    }
+
+    .circle2 {
+        height: 50px;
+        width: 50px;
+        right: 150%;
+        margin-left: 80px;
+        margin-top: 135px;
+    }
+
+    .aboutCard {
+        display: none;
+    }
+    .col {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 1140px) {
+    section {
+        padding: 50px 8%;
+    }
+
+    #menu-icon {
+        display: initial;
+        color: white;
+    }
+
+    header .navbar {
+        position: absolute;
+        margin-left: 300px;
+        top: -400px;
+        display: flex;
+        flex-direction: column;
+        background: #cbcad1;
+        transition: .3s;
+    }
+
+    header .navbar.active {
+        top: 70px;
+    }
+
+    .home {
+        background-color: #9831FF;
+        min-height: 100vh;
+    }
+
+    .navbar a {
+        padding: 1.5rem;
+        display: block;
+    }
+}
