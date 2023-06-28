@@ -1,0 +1,192 @@
+* {
+  font-family: 'Sen';
+}
+
+.error,
+#category-error,
+#expense-error,
+#subclass-error {
+  color: red;
+}
+
+#container {
+  box-sizing: border-box;
+  width: 420px;
+  height: 167px;
+  background: linear-gradient(270.01deg, #26FFF2 0.01%, #B658FF 99.99%);
+  border: none;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#total-income {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  font-size: 25px;
+  color: white;
+}
+
+.income-input {
+  border-radius: 20px;
+  width: 350px;
+  border: none;
+  height: 29px;
+  padding-left: 10px;
+}
+
+.income-input:focus {
+  outline: none;
+}
+
+/* button inside the input text*/
+.add-income-button {
+  position: absolute;
+  left: 79%;
+  transform: translateY(3%);
+  border-radius: 20px;
+  border: 2px;
+  height: 32px;
+  width: 60px;
+  cursor: pointer;
+  background-color: #24d3c7;
+  color: white;
+}
+
+/* add/remove buttons */
+#income-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* buttons styling */
+#add-income,
+#remove-income {
+  margin: 5px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 150px;
+  background-color: rgba(241, 241, 241, 0.5);
+  border: none;
+  font-weight: bold;
+}
+
+/* form format */
+#expense-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* add category button style */
+.add-category-button {
+  position: absolute;
+  left: 55.5%;
+  transform: translateY(0%);
+  border-radius: 20px;
+  border: 2px;
+  height: 35px;
+  width: 80px;
+  cursor: pointer;
+  background-color: #24d3c7;
+  color: white;
+}
+
+/* add category button style */
+.add-category-button:hover {
+  background-color: #B658FF;
+  transition: 1s;
+}
+
+/* category input style */
+#category,
+#default-category {
+  border-radius: 20px;
+  width: 350px;
+  border-color: #24d3c7;
+  height: 29px;
+  padding-left: 10px;
+}
+
+/* category input style */
+#category:hover {
+  border-color: #B658FF;
+  transition: 1s;
+}
+
+#added-category {
+  text-align: center;
+  color: #B658FF;
+}
+
+#default-category:hover {
+  cursor: pointer;
+}
+
+/* format for default label */
+.default-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+/* category label  */
+.category-label {
+  display: none;
+}
+
+/* appears for every category created */
+.delete-category {
+  float: right;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.delete-category:hover {
+  background-color: rgb(218, 73, 68);
+  color: white;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+.expense-amount {
+  color: #00e500;
+}
+
+.income-container {
+  display: inline;
+}
+
+.progress-bar-container {
+  display: flex;
+  height: 20px;
+  background-color: lightgray;
+  margin-bottom: 10px;
+  width: 400px;
+  border-radius: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #26FFF2;
+  width: 0%;
+  transition: width 1s ease-in-out;
+}
+
+.empty-bar {
+  background-color: lightgray;
+}
+
+.filled-bar {
+  border-radius: 15px;
+}
