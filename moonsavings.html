@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="moonsavings.css">
+</head>
+
+<body>
+    <h1>Moon Savings</h1>
+
+    <div id="container">
+        <div id="total-income">$0.00</div>
+
+        <div id="income-container">
+            <button id="add-income">Add Income</button>
+            <button id="remove-income">Remove Income</button>
+        </div>
+    </div>
+
+    <div class="error" id="income-error">Please enter a valid income</div>
+
+    <form id="expense-form">
+        <label for="category" id="category-label" class="category-label">Category:</label>
+        <input type="text" id="category" placeholder="Enter Category Name">
+        <button type="submit" class="add-category-button" id="add-category-button">Add Category</button>
+    </form>
+
+    <div id="added-category"></div>
+    <div class="category-error" id="category-error">Please enter a category</div>
+
+    <div class="default-container">
+        <label for="default-category" class="default-label" id="deafult-label"></label>
+        <select id="default-category">
+            <option value="" selected disabled>Or Select a Category</option>
+            <option value="Food">Food</option>
+            <option value="Rent">Rent</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Utilities">Utilities</option>
+        </select>
+    </div>
+
+    <button id="delete-category" style="display: none;">Delete</button>
+
+    <div id="categories"></div>
+
+
+    <div class="sub-class"></div>
+    <div class="expense"></div>
+
+    <div class="sub-category" id="sub-category" style="display: none;">
+        <input type="text" class="subclass-input" placeholder="Description">
+        <input type="number" class="expense-input" placeholder="Value">
+        <button class="add-subclass" id="add-subclass">Add</button>
+        <div id="expense-error">Expense cannot exceed your income.</div>
+        <div class="subclass-error" id="subclass-error">Make sure you have a subclass and expense is a numerical value
+        </div>
+    </div>
+
+    <script src="moonsavings.js"></script>
+</body>
+
+</html>
